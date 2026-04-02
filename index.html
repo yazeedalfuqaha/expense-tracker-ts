@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic SEO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker App | Manage Your Money Easily</title>
+    <meta name="description" content="Track your income and expenses بسهولة باستخدام تطبيق Expense Tracker بسيط وسريع لإدارة أموالك اليومية.">
+    <meta name="keywords" content="expense tracker, money management, budget app, income, expenses, personal finance">
+    <meta name="author" content="Yazeed Alfuqaha">
+
+    <!-- Open Graph (for social media) -->
+    <meta property="og:title" content="Expense Tracker App">
+    <meta property="og:description" content="Track your income and expenses بسهولة واحترافية.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/logo.png">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/logo.png">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fonts (optional تحسين) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+<div class="container">
+    <header>
+        <h1>My Wallet - Expense Tracker</h1>
+        <p class="date-display" id="current-date"></p>
+    </header>
+
+    <main>
+        <section class="summary-grid">
+            <div class="card total-balance">
+                <h2>Current Balance</h2>
+                <p>£<span id="balance-total">0.00</span></p>
+            </div>
+            <div class="card income">
+                <h2><i class="fa-solid fa-arrow-up"></i> Income</h2>
+                <p>£<span id="income-total">0.00</span></p>
+            </div>
+            <div class="card expense">
+                <h2><i class="fa-solid fa-arrow-down"></i> Spent</h2>
+                <p>£<span id="spent-total">0.00</span></p>
+            </div>
+        </section>
+
+        <section class="form-wrapper">
+            <h2>Add New Transaction</h2>
+            <form class="new-item-form">
+                <div class="input-group">
+                    <label for="tofrom">Recipient / Client</label>
+                    <input type="text" id="tofrom" placeholder="e.g. Starbucks" required>
+                </div>
+                
+                <div class="row">
+                    <div class="input-group">
+                        <label for="amount">Amount (£)</label>
+                        <input type="number" id="amount" step="0.01" placeholder="0.00" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="type">Type</label>
+                        <select id="type">
+                            <option value="payment">Payment In</option>
+                            <option value="invoice">Invoice Out</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="details">Details</label>
+                    <input type="text" id="details" placeholder="What was this for?" required>
+                </div>
+
+                <button type="submit" class="add-btn">Add Transaction</button>
+            </form>
+        </section>
+
+        <section class="history-wrapper">
+            <div class="history-header">
+                <h2>Recent History</h2>
+            </div>
+            <ul class="item-list">
+                <li class="empty-state">No transactions recorded yet.</li>
+            </ul>
+        </section>
+    </main>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
