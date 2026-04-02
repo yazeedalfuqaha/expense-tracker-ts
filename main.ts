@@ -31,7 +31,7 @@ class Transaction {
   }
 
   format(): string {
-    return `${this.client} - £${this.amount} (${this.type})`;
+    return `${this.client} -  £ ${this.amount} (${this.type})`;
   }
 }
 
@@ -109,3 +109,5 @@ form.addEventListener('submit', (e: Event) => {
 
   form.reset();
 });
+
+
